@@ -16,15 +16,15 @@ body {
 
 .container {
   display: flex;
-  width: 90vw; /* take up 90% of viewport width */
+  width: 70vw; /* take up 70% of viewport width */
 }
 
 .panel {
-  background-size: auto 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 80vh;
-  border-radius: 50px;
+  border-radius: 24px;
   color: #fff;
   cursor: pointer;
   flex: 0.5;
@@ -50,6 +50,7 @@ body {
 /* Show headline for active card */
 .panel.active h3 {
   opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
 }
 
 @media (max-width: 480px) {
