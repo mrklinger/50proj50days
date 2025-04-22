@@ -7,10 +7,59 @@
 body {
   font-family: "Roboto", sans-serif;
   display: flex; /* centering content for projects */
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   overflow: hidden; /* hide scroll bars by default */
   margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 90vw; /* take up 90% of viewport width */
+}
+
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px; /* position at bottom left */
+  left: 20px;
+  margin: 0;
+  opacity: 0; /* h3 is invisibile when card is inactive */
+}
+
+/* Making expanded card much wider */
+.panel.active {
+  flex: 5;
+}
+
+/* Show headline for active card */
+.panel.active h3 {
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  /* Hide the last two cards two make room */
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
 }
