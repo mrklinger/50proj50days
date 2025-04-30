@@ -4,19 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Font awesome code when needed -->
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    /> -->
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Incrementing Counter</title>
   </head>
 
   <body>
-    <h1>Project Starter</h1>
+    <div class="counter-container">
+      <i class="fab fa-twitter fa-3x"></i>
+      <div class="counter" data-target="12000">12000</div>
+      <span>Twitter Followers</span>
+    </div>
+
+    <div class="counter-container">
+      <i class="fab fa-youtube fa-3x"></i>
+      <div class="counter" data-target="5000">5000</div>
+      <span>YouTube Subscribers</span>
+    </div>
+
+    <div class="counter-container">
+      <i class="fab fa-facebook fa-3x"></i>
+      <div class="counter" data-target="7500">7500</div>
+      <span>Facebook Fans</span>
+    </div>
 
     <script src=js/script.js"></script>
   </body>
