@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link to Font Awesome (for clipboard icon) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -15,17 +16,22 @@
   <body>
     <div class="container">
       <h2>Password Generator</h2>
+
       <div class="result-container">
         <span id="result"></span>
+        <!-- clipboard icon button -->
         <button class="btn" id="clipboard">
           <i class="far fa-clipboard"></i>
         </button>
       </div>
+
+      <!-- Password Settings -->
       <div class="settings">
         <div class="setting">
           <label>Password Length</label>
           <input type="number" id="length" min="4" max="20" value="20" />
         </div>
+        <!-- CHeckboxes - checked by default -->
         <div class="setting">
           <label>Include uppercase letters</label>
           <input type="checkbox" id="uppercase" checked />
