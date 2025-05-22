@@ -9,11 +9,13 @@ body {
   background-color: #7bdaf3;
   font-family: "Poppins", sans-serif;
   display: flex;
+  /* so Notes will go onto next line when needed */
   flex-wrap: wrap;
   margin: 0;
   padding-top: 3rem;
 }
 
+/* Add Note button in top right corner */
 .add {
   position: fixed;
   top: 1rem;
@@ -30,15 +32,18 @@ body {
   transform: scale(0.98);
 }
 
+/* styling the Note */
 .note {
   background-color: #fff;
+  /* box shadow: horiz offset, vert offset, blur */
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
   margin: 30px 20px;
   height: 400px;
   width: 400px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
+/* edit and delete button area */
 .note .tools {
   background-color: #9ec862;
   display: flex;
@@ -55,6 +60,7 @@ body {
   margin-left: 0.5rem;
 }
 
+/* text area of note */
 .note textarea {
   outline: none;
   font-family: inherit;
