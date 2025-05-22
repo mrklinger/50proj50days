@@ -13,6 +13,7 @@ body {
   margin: 0;
 }
 
+/* sizing images */
 img {
   width: 500px;
   height: 500px;
@@ -20,15 +21,20 @@ img {
 }
 
 .carousel {
+  /* box shadow: Horiz offset, Vert offset, blur */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  /* height 530 to account for images and buttons */
   height: 530px;
   width: 500px;
   overflow: hidden;
 }
 
 .image-container {
+  /* put images into a flex row - allows to only see one image */
   display: flex;
+  /* set intial position so JS can adjust position along X-axis */
   transform: translateX(0);
+  /* add transition to allow smooth animation effect */
   transition: transform 0.5s ease-in-out;
 }
 
