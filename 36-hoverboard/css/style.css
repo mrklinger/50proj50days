@@ -25,10 +25,13 @@ body {
   box-shadow: 0 0 2px #000;
   height: 16px;
   width: 16px;
+  /* separate squares a little bit */
   margin: 2px;
+  /* creating fade effect for colors */
   transition: 2s ease;
 }
 
+/* square immediately lights up, takes 2 seconds for color to disappear (fade effect) */
 .square:hover {
   transition-duration: 0s;
 }
