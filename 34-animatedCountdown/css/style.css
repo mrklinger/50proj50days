@@ -17,10 +17,12 @@ h4 {
   text-transform: uppercase;
 }
 
+/* another way to center content within browser window */
 .counter {
   position: fixed;
   top: 50%;
   left: 50%;
+  /* to put center of element in the center */
   transform: translate(-50%, -50%);
   text-align: center;
 }
@@ -31,6 +33,7 @@ h4 {
 }
 
 @keyframes hide {
+  /* default state */
   0% {
     transform: translate(-50%, -50%) scale(1);
   }
@@ -77,13 +80,16 @@ h4 {
 }
 
 .nums span {
+  /* show numbers in middle of screen */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(120deg);
+  /* change starting position of numbers */
   transform-origin: bottom center;
 }
 
+/* set the "in" numbers into focus */
 .nums span.in {
   transform: translate(-50%, -50%) rotate(0deg);
   animation: goIn 0.5s ease-in-out;
@@ -93,6 +99,7 @@ h4 {
   animation: goOut 0.5s ease-in-out;
 }
 
+/* Number animation */
 @keyframes goIn {
   0% {
     transform: translate(-50%, -50%) rotate(120deg);
