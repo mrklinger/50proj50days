@@ -29,8 +29,10 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  /* making room for bottom tab navigation */
   height: calc(100% - 60px);
   width: 100%;
+  /* fade in effect on img */
   transition: opacity 0.4s ease;
 }
 
