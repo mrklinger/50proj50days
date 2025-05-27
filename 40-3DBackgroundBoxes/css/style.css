@@ -28,6 +28,7 @@ body {
   position: fixed;
   top: 20px;
   letter-spacing: 1px;
+  /* X offset (0), Y offset (3px) */
   box-shadow: 0 3px rgba(249, 202, 36, 0.5);
   z-index: 100;
 }
@@ -38,9 +39,11 @@ body {
 
 .magic:active {
   box-shadow: none;
+  /* +2px will translate down */
   transform: translateY(2px);
 }
 
+/* container */
 .boxes {
   display: flex;
   flex-wrap: wrap;
@@ -48,29 +51,40 @@ body {
   height: 500px;
   width: 500px;
   position: relative;
+  /* add transition so rotation is smooth */
   transition: 0.4s ease;
 }
 
+/* increase width and height to 600 if has class of big */
 .boxes.big {
   width: 600px;
   height: 600px;
 }
 
+/* adding rotation animation */
 .boxes.big .box {
   transform: rotateZ(360deg);
 }
 
+/* individual box */
 .box {
   background-image: url("https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif");
   background-repeat: no-repeat;
+  /* setting to size of initial container (500px) */
+  /* change position using JS to show one big image */
   background-size: 500px 500px;
   position: relative;
+  /* 1/4 * 500 (container width) */
   height: 125px;
   width: 125px;
+  /* this controls the rotation animation speed */
   transition: 0.4s ease;
 }
 
+/* creating 3D background of images */
 .box::after {
+  /* need to include empty content value
+  Consider this an invisible element */
   content: "";
   background-color: #f6e58d;
   position: absolute;
