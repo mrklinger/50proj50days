@@ -27,6 +27,7 @@ body {
 }
 
 .subtitle {
+  /* small tag is inline by default -- need to change to inline-block */
   display: inline-block;
   margin: 5px 0 20px;
   opacity: 0.8;
@@ -38,6 +39,7 @@ body {
   padding: 30px 20px;
 }
 
+/* styling the Search input */
 .header input {
   background-color: rgba(0, 0, 0, 0.3);
   border: 0;
@@ -85,10 +87,12 @@ body {
   font-size: 12px;
 }
 
+/* using pseudo selector to select everything except last element */
 .user-list li:not(:last-of-type) {
   border-bottom: 1px solid #eee;
 }
 
+/* adding class of Hide to use for the Filter */
 .user-list li.hide {
   display: none;
 }
