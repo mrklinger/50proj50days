@@ -21,13 +21,16 @@ h2 {
   top: 10px;
 }
 
+/* position relative so can position the label absolute and move alogn bar using JS */
 .range-container {
   position: relative;
 }
 
+/* can target using the brackets and type */
 input[type="range"] {
   width: 300px;
   margin: 18px 0;
+  /* makes the horizontal line (track) of the slider go away */
   -webkit-appearance: none;
 }
 
@@ -35,6 +38,7 @@ input[type="range"]:focus {
   outline: none;
 }
 
+/* style label */
 input[type="range"] + label {
   background-color: #fff;
   position: absolute;

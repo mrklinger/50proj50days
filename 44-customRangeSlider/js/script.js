@@ -2,17 +2,21 @@ const range = document.getElementById("range");
 
 range.addEventListener("input", (e) => {
   const value = +e.target.value;
+  // label is sibling of the input
   const label = e.target.nextElementSibling;
 
+  // getting width of the track (values from CSS = 300px)
   const range_width = getComputedStyle(e.target).getPropertyValue("width");
   const label_width = getComputedStyle(label).getPropertyValue("width");
 
+  // - 2 to take the "px" off
   const num_width = +range_width.substring(0, range_width.length - 2);
   const num_label_width = +label_width.substring(0, label_width.length - 2);
 
-  const max = +e.target.max;
-  const min = +e.target.min;
+  const max = +e.target.max; // 100
+  const min = +e.target.min; // 0
 
+  // current value = 0-100
   const left =
     value * (num_width / max) -
     num_label_width / 2 +
