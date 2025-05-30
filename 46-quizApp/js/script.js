@@ -1,3 +1,4 @@
+// Array of objects with question and answers
 const quizData = [
   {
     question: "Which language runs in a web browser?",
@@ -63,6 +64,8 @@ function deselectAnswers() {
   answerEls.forEach((answerEl) => (answerEl.checked = false));
 }
 
+// logs the answer that is selected (a, b, c, or d)
+// returns getSelected() with the answer selected
 function getSelected() {
   let answer;
 
@@ -78,6 +81,7 @@ function getSelected() {
 submitBtn.addEventListener("click", () => {
   const answer = getSelected();
 
+  // check if answer selected is correct, increase score
   if (answer) {
     if (answer === quizData[currentQuiz].correct) {
       score++;
@@ -88,6 +92,7 @@ submitBtn.addEventListener("click", () => {
     if (currentQuiz < quizData.length) {
       loadQuiz();
     } else {
+      // button will reload the page on click
       quiz.innerHTML = `
                 <h2>You answered ${score}/${quizData.length} questions correctly</h2>
 
