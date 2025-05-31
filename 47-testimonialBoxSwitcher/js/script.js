@@ -4,6 +4,8 @@ const userImage = document.querySelector(".user-image");
 const username = document.querySelector(".username");
 const role = document.querySelector(".role");
 
+// store testimonials in an array
+// could use database to serve the testimonials with API
 const testimonials = [
   {
     name: "Miyah Myles",
@@ -51,9 +53,11 @@ const testimonials = [
   },
 ];
 
+// setting idx = 1 because first testimonial is already in the HTML
 let idx = 1;
 
 function updateTestimonial() {
+  // destructuring the array to pull out the fields to simplify the data pull
   const { name, position, photo, text } = testimonials[idx];
 
   testimonial.innerHTML = text;
