@@ -10,6 +10,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* changed to min-height */
   min-height: 100vh;
   margin: 0;
 }
@@ -24,13 +25,17 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  /* set max width to keep it to 3 images maximum per row */
   max-width: 1000px;
 }
 
 .container img {
   object-fit: cover;
   margin: 10px;
+  /* add size to images so they are all the same size
+  right now the images are randomly (300-310) x (300-310) */
   height: 300px;
   width: 300px;
+  /* add max width so imgs dont go out of container */
   max-width: 100%;
 }
