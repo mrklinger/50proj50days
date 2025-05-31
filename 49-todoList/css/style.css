@@ -23,6 +23,7 @@ h1 {
   opacity: 0.4;
 }
 
+/* width of entire form */
 form {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   max-width: 100%;
@@ -46,6 +47,7 @@ form {
   outline-color: rgb(179, 131, 226);
 }
 
+/* styling the ToDo's - can hardcode one in HTML first to see while styling before adding dynamically in JS */
 .todos {
   background-color: #fff;
   padding: 0;
