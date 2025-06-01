@@ -7,6 +7,7 @@
 body {
   background-color: #516dff;
   color: #fff;
+  /* Nintendo game looking font */
   font-family: "Press Start 2P", sans-serif;
   height: 100vh;
   overflow: hidden;
@@ -22,6 +23,7 @@ h1 {
   line-height: 1.4;
 }
 
+/* Play Game button */
 .btn {
   border: 0;
   background-color: #fff;
@@ -39,6 +41,7 @@ h1 {
   outline: 0;
 }
 
+/* want screen to take up whole viewport */
 .screen {
   display: flex;
   flex-direction: column;
@@ -49,6 +52,7 @@ h1 {
   transition: margin 0.5s ease-out;
 }
 
+/* adding style/class for changing screen functionality */
 .screen.up {
   margin-top: -100vh;
 }
