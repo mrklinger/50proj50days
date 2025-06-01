@@ -3,6 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- paste this script tag to include Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -15,21 +16,27 @@
     <title>Simple Timer</title>
   </head>
 
+  <!-- min-h-screen is essentiall 100vh - this is all like our other CSS -->
+  <!-- p = padding, w-full - full width, max-w-sm = small max width -->
+  <!-- text-4xl is text size -->
   <body class="bg-gray-700 flex justify-center items-center min-h-screen">
     <div class="bg-gray-900 p-16 rounded-2xl shadow w-full max-w-sm">
       <h1 class="text-4xl text-center text-white">Timer</h1>
 
-      <!-- Create the circle -->
+      <!-- Create the circle and timer -->
+      <!-- m = margin -->
       <div
         id="conic"
         class="bg-conic flex items-center justify-center w-60 h-60 mx-auto my-10 rounded-full relative"
       >
         <p id="timer" class="text-blue-200 relative text-5xl z-10">00:00</p>
 
-        <!-- Create the inner cirlce and line -->
+        <!-- Create the inner grey circle to cover white circle and line -->
+        <!-- can use [ ] and calc function to define width (w) property -->
         <div
           class="w-[calc(100%-4px)] aspect-square bg-gray-800 rounded-full absolute inset-[2px]"
         ></div>
+
         <!-- Create the hand/marker -->
         <div class="hand h-1/2 absolute top-0">
           <span
@@ -38,6 +45,7 @@
         </div>
       </div>
 
+      <!-- Buttons -->
       <div class="flex justify-center gap-6">
         <button
           id="reset"

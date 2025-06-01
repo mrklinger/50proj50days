@@ -11,6 +11,7 @@
   );
 }
 
+/* animation for the hand (little circle marker that moves around timer) */
 .hand {
   transform-origin: bottom center;
   transform: rotate(var(--degrees));

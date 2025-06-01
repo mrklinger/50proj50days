@@ -1,6 +1,7 @@
 const resetBtn = document.querySelector("#reset");
 const playBtn = document.querySelector("#play");
 const timerEl = document.querySelector("#timer");
+// can select the root scope to adjust the degrees var
 const root = document.querySelector(":root");
 
 // Initial setup
@@ -9,9 +10,12 @@ let playing = false;
 let currentSeconds = totalSeconds;
 timerEl.innerText = formatTime(totalSeconds);
 
+// run the Run function every 1 second
 const timerInterval = setInterval(run, 1000);
 
+// Event listeners for Play button and Reset button
 playBtn.addEventListener("click", () => {
+  // this will toggle play/pause
   playing = !playing;
   playBtn.classList.toggle("play");
   playBtn.classList.toggle("bg-green-500"); // Toggle the color class
@@ -31,6 +35,7 @@ function run() {
     }
 
     timerEl.innerText = formatTime(currentSeconds);
+    // changing CSS property using JS
     root.style.setProperty("--degrees", calcDeg());
   }
 }
